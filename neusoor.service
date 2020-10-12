@@ -1,0 +1,10 @@
+[Unit]
+Description=Listen for Neus events on Azure Event Hub
+
+[Service]
+ExecStart=/home/pti/.local/bin/pipenv run python neusoor.py
+WorkingDirectory=/home/pti/neusoor
+EnvironmentFile=/home/pti/neusoor/.env
+
+[Install]
+WantedBy=default.target
